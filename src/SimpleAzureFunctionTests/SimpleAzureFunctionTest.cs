@@ -30,10 +30,10 @@ namespace SimpleAzureFunctionTests
 
             var res = SimpleAzureFunction.Run(req.Object, logger.Object);
 
-            var resultObject = (OkObjectResult)res; 
+            var result = (OkObjectResult)res; 
 
-            Assert.Equal(200, resultObject.StatusCode);
-            Assert.Equal("Hello, dave", resultObject.Value);
+            Assert.Equal(200, result.StatusCode);
+            Assert.Equal("Hello, dave", result.Value);
         }
     }
 }
