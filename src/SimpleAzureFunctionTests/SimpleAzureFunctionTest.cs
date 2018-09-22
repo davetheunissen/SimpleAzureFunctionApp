@@ -5,11 +5,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Primitives;
 using Moq;
 using SimpleAzureFunctionApp;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
-using System.Net.Http;
 using Xunit;
 
 namespace SimpleAzureFunctionTests
