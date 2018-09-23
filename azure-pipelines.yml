@@ -8,10 +8,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  
+
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
+    command: build
     projects: '**/*App/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
