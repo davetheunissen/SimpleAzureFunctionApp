@@ -16,6 +16,7 @@ steps:
     command: build
     projects: '**/*App/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
+    zipAfterPublish: true
 
 - task: DotNetCoreCLI@2
   displayName: Run Unit Tests
