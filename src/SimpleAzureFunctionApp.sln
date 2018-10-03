@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunctionApp", "SimpleAzureFunctionApp\SimpleAzureFunctionApp.csproj", "{02C1955E-E60B-4E6D-A88C-70FA2FC6C6DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAzureFunctionTests", "SimpleAzureFunctionTests\SimpleAzureFunctionTests.csproj", "{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunctionTests", "SimpleAzureFunctionTests\SimpleAzureFunctionTests.csproj", "{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAzureFunctionExtension", "SimpleAzureFunctionExtension\SimpleAzureFunctionExtension.csproj", "{41FAD7F3-2E64-4784-AC01-B87D1F760821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FAD7F3-2E64-4784-AC01-B87D1F760821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FAD7F3-2E64-4784-AC01-B87D1F760821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FAD7F3-2E64-4784-AC01-B87D1F760821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FAD7F3-2E64-4784-AC01-B87D1F760821}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
