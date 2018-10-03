@@ -16,21 +16,17 @@ namespace SimpleAzureFunctionTests
         [Fact]
         public void SimpleAzureFunction_Should_Return_Name()
         {
-            var logger = new Mock<ILogger>();
-
-            var query = new Dictionary<string, StringValues>();
-            query.TryAdd("name", "dave");
-
             var req = new Mock<HttpRequest>();
-            req.Setup(x => x.Query).Returns(new QueryCollection(query));
             req.Setup(x => x.Body).Returns(new MemoryStream());
 
-            var res = SimpleAzureFunction.Run(req.Object, logger.Object);
+            var logger = new Mock<ILogger>();
+
+            var res = SimpleAzureFunction.Run(req.Object, "Dave", logger.Object);
 
             var result = (OkObjectResult)res; 
 
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal("Hello, dave", result.Value);
+            Assert.Equal("Dave", result.Value);
         }
     }
 }
