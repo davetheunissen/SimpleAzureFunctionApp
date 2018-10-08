@@ -21,12 +21,12 @@ namespace SimpleAzureFunctionTests
 
             var logger = new Mock<ILogger>();
 
-            var res = SimpleAzureFunction.Run(req.Object, "Dave", logger.Object);
+            var res = SimpleAzureFunction.Run(req.Object, "Test1", "Test1", logger.Object);
 
             var result = (OkObjectResult)res; 
 
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal("Dave", result.Value);
+            Assert.Equal("Test1", result.Value);
         }
     }
 }
