@@ -26,6 +26,15 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 
 - task: PublishBuildArtifacts@1
-  displayName: Publish Artifacts
+  displayName: Publish Simple Function Artifacts
   inputs:
-    PathtoPublish: 'src/SimpleAzureFunctionApp/bin/Release/netstandard2.0' 
+    PathtoPublish: 'src/SimpleAzureFunctionApp/bin/Release/netstandard2.0'
+    artifactName: 'SimpleFunctionApp' 
+    publishLocation: 'Container'
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Cold Start Demo Function Artifacts
+  inputs:
+    PathtoPublish: 'src/ColdStartDemoFunctionApp/bin/Release/netstandard2.0' 
+    artifactName: 'ColdStartDemoFunctionApp' 
+    publishLocation: 'Container'
