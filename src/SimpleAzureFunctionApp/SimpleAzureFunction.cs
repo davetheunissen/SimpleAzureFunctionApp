@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Logging;
 using SimpleAzureFunctionExtension;
+using System;
+using System.Threading;
 
 namespace SimpleAzureFunctionApp
 {
@@ -19,7 +21,6 @@ namespace SimpleAzureFunctionApp
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-
             return new OkObjectResult(result);
         }
     }

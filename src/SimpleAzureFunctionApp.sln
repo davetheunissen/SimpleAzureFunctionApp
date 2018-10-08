@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunctionApp", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunctionTests", "SimpleAzureFunctionTests\SimpleAzureFunctionTests.csproj", "{5F611C13-37F0-4CD1-A540-0FA7FC844AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAzureFunctionExtension", "SimpleAzureFunctionExtension\SimpleAzureFunctionExtension.csproj", "{41FAD7F3-2E64-4784-AC01-B87D1F760821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunctionExtension", "SimpleAzureFunctionExtension\SimpleAzureFunctionExtension.csproj", "{41FAD7F3-2E64-4784-AC01-B87D1F760821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

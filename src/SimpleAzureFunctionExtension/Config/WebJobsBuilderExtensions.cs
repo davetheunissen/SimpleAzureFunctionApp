@@ -18,15 +18,11 @@ namespace SimpleAzureFunctionExtension.Config
         /// <param name="builder">The <see cref="IWebJobsBuilder"/> to configure.</param>
         public static IWebJobsBuilder AddSimpleExtension(this IWebJobsBuilder builder)
         {
-            // null check
             if (builder == null)
                 throw new ArgumentNullException(nameof(builder));
 
-            // register custom extension config
             builder.AddExtension<SimpleExtensionConfigProvider>();
-            // configure dependancy resolution
             builder.Services.AddSingleton<ISimpleService, SimpleService>();
-
             return builder;
         }
     }
