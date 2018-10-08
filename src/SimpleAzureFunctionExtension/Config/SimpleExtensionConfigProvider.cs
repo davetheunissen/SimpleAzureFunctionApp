@@ -27,7 +27,8 @@ namespace SimpleAzureFunctionExtension.Config
 
         private string BuildItemFromAttribute(SimpleExtensionAttribute attribute)
         {
-            return _simpleService.GetHelloWorld(attribute.Name);
+            var result = $"Input Param: {attribute.Name}, Service Instance ID: {_simpleService.Id}";
+            return result;
         }
     }
 }

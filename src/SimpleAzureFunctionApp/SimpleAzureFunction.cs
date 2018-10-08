@@ -16,12 +16,13 @@ namespace SimpleAzureFunctionApp
     {
         [FunctionName("SimpleAzureFunction")]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequest req, 
-            [SimpleExtension(Name = "Dave")] string result,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{param}")]HttpRequest req,
+            string param,
+            [SimpleExtension(Name = "{param}")] string extResult,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-            return new OkObjectResult(result);
+            return new OkObjectResult(extResult);
         }
     }
 }

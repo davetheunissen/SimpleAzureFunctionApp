@@ -7,9 +7,11 @@ namespace SimpleAzureFunctionExtension.Services
 {
     internal sealed class SimpleService : ISimpleService
     {
-        public string GetHelloWorld(string name)
+        public SimpleService()
         {
-            return $"{name} says Hello World!";
+            Id = Guid.NewGuid();
         }
+
+        public Guid Id { get; }
     }
 }

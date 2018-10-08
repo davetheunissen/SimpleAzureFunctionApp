@@ -7,6 +7,6 @@ namespace SimpleAzureFunctionExtension.Services
 {
     internal interface ISimpleService
     {
-        string GetHelloWorld(string name);
+        Guid Id { get; }
     }
 }
