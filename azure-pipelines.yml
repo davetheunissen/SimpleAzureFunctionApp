@@ -7,6 +7,8 @@ trigger:
 - master
 pool:
   vmImage: ubuntu-latest
+variables:
+  buildConfiguration: 'Release'
 steps:
 
 - task: DotNetCoreCLI@2
@@ -14,9 +16,9 @@ steps:
     command: 'restore'
     projects: '**/*SimpleAzureFunctionApp.csproj'
     feedsToUse: 'select'
+
 - task: DotNetCoreCLI@2
-  displayName: 'build stage v1'
   inputs:
     command: 'build'
     projects: '**/*SimpleAzureFunctionApp.csproj'
-    arguments: 'Build stage'
+    arguments: '--configuration $(buildConfiguration)'
