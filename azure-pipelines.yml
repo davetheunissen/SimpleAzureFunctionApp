@@ -15,8 +15,10 @@ steps:
     command: 'restore'
     projects: '**/*App/*.csproj'
     feedsToUse: 'select'
-- task: DotNetCoreCLI@2
+- task: ArchiveFiles@2
   inputs:
-    command: 'build'
-    projects: '**/*App/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    rootFolderOrFile: '$(build.sourcesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
