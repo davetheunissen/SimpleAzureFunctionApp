@@ -14,11 +14,11 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '**/*SimpleAzureFunctionApp.csproj'
+    projects: '**/*App/*.csproj'
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*.csproj'
+    projects: '**/*App/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
