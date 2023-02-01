@@ -20,5 +20,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*SimpleAzureFunctionApp.csproj'
+    projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
